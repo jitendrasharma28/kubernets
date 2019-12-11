@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: label-prod-web
+  labels:
+    environment: prod
+    app: nginix
+spec:
+  containers:
+  - name: "nginix web server"
+    image: nginix
+    ports:
+      -containerPort: 80
